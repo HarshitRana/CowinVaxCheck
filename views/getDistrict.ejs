@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get District</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="title">Vaccine Availabilty Checker</div>
+      <div class="form">
+        <select id="states" name="states" class="states"></select>
+        <button id="button">Get districts</button>
+        <select id="districts" name="districts" class="districts"></select>
+      </div>
+      <div id="age" class="age">
+        <input type="radio" name="age" value="0" checked="checked" /><span
+          class="pl-1"
+          >Any</span
+        >
+        <input type="radio" name="age" value="18" /><span class="pl-1"
+          >18-44</span
+        >
+        <input type="radio" name="age" value="45" /><span class="pl-1"
+          >45+</span
+        >
+      </div>
+      <div class="submit"><button id="submit">Submit</button></div>
+    </div>
+    <script>
+      var data;
+      var web = new XMLHttpRequest();
+      web.open(
+        "GET",
+        "https://cdn-api.co-vin.in/api/v2/admin/location/states",
+        true
+      );
+      web.onload = function () {
+        if (this.status >= 200 && this.status < 400) {
+          data = JSON.parse(this.responseText);
+          var states = data.states;
+          var output;
+          states.forEach((state) => {
+            output +=
+              "<option value='" +
+              state.state_id +
+              "'>" +
+              state.state_name +
+              "</option>";
+          });
+          document.getElementById("states").innerHTML = output;
+        }
+      };
+      web.send();
+
+      const state = document.querySelector(".states");
+      document.getElementById("button").addEventListener("click", (e) => {
+
+        var data;
+        var web = new XMLHttpRequest();
+        web.open(
+          "GET",
+          "https://cdn-api.co-vin.in/api/v2/admin/location/districts/" +
+            state.value,
+          true
+        );
+        web.onload = function () {
+          if (this.status >= 200 && this.status < 400) {
+            data = JSON.parse(this.responseText);
+            var districts = data.districts;
+            var output;
+            districts.forEach((district) => {
+              output +=
+                "<option value='" +
+                district.district_id +
+                "'>" +
+                district.district_name +
+                "</option>";
+            });
+            document.getElementById("districts").innerHTML = output;
+          }
+        };
+        web.send();
+        const district = document.querySelector(".districts");
+        document
+          .getElementById("submit")
+          .addEventListener("click", async (e) => {
+          
+            var districtID = district.value;
+            today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //As January is 0.
+            var yyyy = today.getFullYear();
+            if (dd < 10) dd = "0" + dd;
+            if (mm < 10) mm = "0" + mm;
+            date = dd + "-" + mm + "-" + yyyy;
+
+
+            const age = document.querySelector(
+              "input[name='age']:checked"
+            ).value;
+
+
+            try {
+              const res = await fetch("/form", {
+                method: "POST",
+                body: JSON.stringify({ districtID, date, age }),
+                headers: { "Content-Type": "application/json" },
+              });
+              const data = await res.json();
+              window.location.href = data.redirect;
+            } catch {}
+          });
+      });
+    </script>
+  </body>
+</html>
