@@ -43,9 +43,9 @@ Now run
 
 
 
- ## Sample search results
- ![login](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/index.jpg)
- ![sign up](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/index2.jpg)
+ ## Sample Search results
+ ![doses1](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/index.jpg)
+ ![doses2](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/index2.jpg)
 
 
 
