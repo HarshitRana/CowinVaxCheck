@@ -39,7 +39,7 @@ Now run
  
  ## Home Page 
  ![home page-1](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/home.jpg)
- ![home page-2](https://github.com/yashguptaji/CoWin/blob/main/uploads/2.png)
+ ![home page-2](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/index.jpg)
 
 
 
