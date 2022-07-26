@@ -44,7 +44,7 @@ Now run
 
 
  ## Sample search results
- ![login](https://github.com/yashguptaji/CoWin/blob/main/uploads/3.png)
+ ![login](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/index.jpg)
  ![sign up](https://github.com/yashguptaji/CoWin/blob/main/uploads/4.png)
 
 
