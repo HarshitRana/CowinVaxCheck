@@ -1,11 +1,14 @@
 # [Vaccine Availability Checker (CoWinVaxCheck)](https://cowinvaxcheck.herokuapp.com/)
 
 
+The Project is deployed [Here!](https://cowinvaxcheck.herokuapp.com/)
+
+
 Tracks Vaccine availability in India using Cowin open API.
 You can search for vaccines using your state-district location pair and also your age group.
    It is built with [Nodejs](https://nodejs.org/), [Express](https://expressjs.com/) and [CoWin API](https://apisetu.gov.in/public/marketplace/api/cowin#/Appointment%20Availability%20APIs/calendarByDistrict) .
 
-The Project is deployed [Here!](https://cowinvaxcheck.herokuapp.com/)
+
 
 
 ## Setting up Environment for running this project
