@@ -22,7 +22,7 @@ function getDate() {
 function abcd(districtID, date = getDate()) {
   return new Promise((resolve, reject) => {
     url =
-      "https://cdn-api.co-vin.in/api/v4/appointment/sessions/public/calendarByDistrict?district_id=" +
+      "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=" +
       districtID +
       "&date=" +
       date;
