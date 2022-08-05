@@ -41,14 +41,14 @@ Now run
  ##### That’s it, You have successfully run this project on your machine!!!
  
  ## Home Page 
- ![home page-1]()
- ![home page-2]()
+ ![home page-1](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/home.jpg)
+ ![home page-2](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/home2.jpg)
 
 
 
  ## Sample Search results
- ![doses1]()
- ![doses2]()
+ ![doses1](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/index.jpg)
+ ![doses2](https://github.com/HarshitRana/CowinVaxCheck/blob/deploy-test/img/index2.jpg)
 
 
 
