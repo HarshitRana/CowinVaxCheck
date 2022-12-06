@@ -1,7 +1,7 @@
-# [Vaccine Availability Checker (CoWinVaxCheck)](https://cowinvaxcheck.herokuapp.com/)
+# [Vaccine Availability Checker (CoWinVaxCheck)](https://cowinvaxcheck.up.railway.app/)
 
 
-The Project is deployed [Here!](https://cowinvaxcheck.herokuapp.com/)
+The Project is deployed [Here!](https://cowinvaxcheck.up.railway.app/)
 
 
 Tracks Vaccine availability in India using Cowin open API.
